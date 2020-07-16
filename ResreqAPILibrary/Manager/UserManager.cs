@@ -72,6 +72,7 @@ namespace ResreqAPILibrary.Manager
             return true;
         }
 
+
         public bool VerifyIfUserExists(int id)
         {
             var content = GetContent("api/users", Methods.GET);
@@ -80,18 +81,13 @@ namespace ResreqAPILibrary.Manager
 
         }
 
-        //public RegisterUserResponse RegisterUser(string endpoint, dynamic payload)
-        //{
-        //    var api = new ApiHelper();
-        //    var serializedRequest = api.Serialize(payload);
-        //    var request = api.CreateRequest(serializedRequest, Methods.POST);
-        //    var client = api.SetUri(endpoint);
-        //    var response = api.GetResponse(client, request);
+        public RegisterUserResponse RegisterUser(IRestResponse response)
+        {
+            var api = new ApiHelper();
+            return api.GetContent<RegisterUserResponse>(response);
+        }
 
-        //    if (response.) return null;
 
-        //    return api.GetContent<RegisterUserResponse>(response);
-        //}
 
 
     }

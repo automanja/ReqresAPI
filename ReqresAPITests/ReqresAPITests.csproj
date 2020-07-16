@@ -60,6 +60,7 @@
     <None Include="Content\CreateUserData.json" />
     <None Include="Content\RegisterUserInvalidData.json" />
     <None Include="Content\GetUsersData.json" />
+    <None Include="Content\RegisterUserWithValidData.json" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
